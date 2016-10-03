@@ -7,6 +7,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :restaurants,
+             :through => :ratings,
+             :source => :restaurant
+
   # Validations
 
   # Include default devise modules. Others available are:
